@@ -1,0 +1,27 @@
+<template name = 'activity'>
+	<div class="activity-content row">
+		
+		<div class="col-md-9">
+			<p class='activity-data'>时间：{{date}}</p>
+			<p class='activity-location'>地点：{{location}}</p>
+			<p class='activity-author'>发布者: {{author}}</p>
+			<p> 参与人数：{{number}}</p>
+		</div>
+
+		<div class="col-md-3">		
+			{{#if ownActivity}}
+				<p><a href="{{pathFor 'activityEdit'}}">Edit</a></p>
+			{{/if}}
+			{{#if alreadyJoin}}
+				<button type="button" class="joinbtn btn btn-default" aria-label="Left Align" disabled="disabled"><span class="heart a glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+				已参加
+				</button>
+			{{else}}
+				<button type="button" class="joinbtn btn btn-primary btn-sm" aria-label="Left Align"><span class="heart a glyphicon glyphicon-heart-empty" aria-hidden="true"></span>我要参加
+				</button>
+			{{/if}}
+
+		</div>
+
+	</div>
+</template>

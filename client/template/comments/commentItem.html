@@ -1,0 +1,21 @@
+<template name="commentItem">
+	<div class="panel panel-default">
+  		<div class="panel-heading">
+    		<h3 class="panel-title">      
+    			<span class="author">{{author}}</span>
+    			<span class="date">发布于 {{submittedText}}</span>
+    		</h3>
+  		</div>
+  		<div class="panel-body">
+    		<div class="row">
+				  <div class="col-md-9">{{body}}</div>
+				  <div class="col-md-3">
+
+				  	{{#if checkUser}}
+				  		<p><a class="btn btn-danger delete btn-sm" href="#">Delete</a></p>
+				  	{{/if}}
+				  </div>
+			</div>  		
+		</div>
+	</div>
+</template>

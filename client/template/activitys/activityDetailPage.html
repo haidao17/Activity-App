@@ -1,0 +1,36 @@
+<template name = 'activityDetailPage'>
+	<div class="modal fade" id="{{_id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">活动详情</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+					{{> activity}}
+				</div>
+				<div class = "jumbotron">
+					<p>{{detail}}</p>
+				</div>
+				<ul class="comments">
+					{{#each comments}}	
+							{{> commentItem}}	
+					{{/each}}	
+				</ul>
+
+				{{#if currentUser}}
+					{{> commentSubmit}}
+					{{else}}
+					<p>请登录后评论</p>
+				{{/if}}
+				</div>
+				
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+</template>

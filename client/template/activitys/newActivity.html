@@ -1,0 +1,25 @@
+<template name="newActivity">
+	<form>
+  		<div class="form-group {{errorClass 'name'}}">
+    		<label for="activityName">活动名称</label>
+	    	<input type="text" class="form-control" id="activityName" placeholder="名称">
+        <span class="help-block">{{errorMessage 'name'}}</span>
+   		</div>
+  		<div class="form-group {{errorClass 'date'}}">
+    		<label for="activityTime">活动时间</label>
+    		<input type="text" class="form-control" id="activityTime" placeholder="时间">
+        <span class="help-block">{{errorMessage 'date'}}</span>
+  		</div>
+  		<div class="form-group {{errorClass 'location'}}">
+    		<label for="activityLocation">活动地点</label>
+    		<input type="text" class="form-control" id="activityLocation" placeholder="地点">
+        <span class="help-block">{{errorMessage 'location'}}</span>
+  		</div>
+	    <div class="form-group {{errorClass 'detail'}}">
+    		<label for="activityDetail">活动详情</label>
+    		<textarea type="textarea" class="form-control" id="activityDetail" placeholder="详情"></textarea>
+        <span class="help-block">{{errorMessage 'detail'}}</span>
+  		</div>	    
+  		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</template>

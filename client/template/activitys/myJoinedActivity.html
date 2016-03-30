@@ -1,0 +1,26 @@
+<template name = 'myJoinedActivity'>
+	<div class = myJoinedActivity>
+		{{#if hasMyJoinedActivity}}
+			{{#each myJoinedActivitys}}
+				<div class="col-md-6">
+					<div class="panel panel-primary">
+				  		<div class="panel-heading">
+				    		<h3 class="panel-title">{{name}}</h3>
+				  		</div>
+				  		<div class="panel-body">
+				    		{{> activity}}
+				  		</div>
+	  					<div class="panel-footer">
+	  						<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#{{_id}}">详情</button>
+	  					</div>
+					</div>	
+					{{> activityDetailPage}}
+				</div>
+			{{/each}}
+		{{else}}
+			<div class="jumbotron">
+				<p>您还没有参与任何活动</p>
+			</div>
+		{{/if}}
+	</div>	
+</template>

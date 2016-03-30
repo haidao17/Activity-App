@@ -1,0 +1,22 @@
+<template name="activityEdit">
+	<form>
+  		<div class="form-group">
+    		<label for="activityName">活动名称</label>
+	    	<input type="text" class="form-control" id="activityName" placeholder="名称" value="{{name}}">
+ 		</div>
+  		<div class="form-group">
+    		<label for="activityTime">活动时间</label>
+    		<input type="text" class="form-control" id="activityTime" placeholder="时间" value="{{date}}">
+  		</div>
+  		<div class="form-group">
+    		<label for="activityLocation">活动地点</label>
+    		<input type="text" class="form-control" id="activityLocation" placeholder="地点" value="{{location}}">
+  		</div>
+	    <div class="form-group">
+    		<label for="activityDetail">活动详情</label>
+    		<textarea type="textarea" class="form-control" id="activityDetail" placeholder="详情" value="{{detail}}"></textarea>
+  		</div>	    
+  		<button type="submit" class="btn btn-default">Submit</button>
+      <a class="btn btn-danger delete" href="#">Delete</a>
+	</form>
+</template>
